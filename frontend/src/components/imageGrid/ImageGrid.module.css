@@ -1,0 +1,81 @@
+/* ImageGrid.module.css */
+
+.imageGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.imageItem {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  aspect-ratio: 16/9;
+}
+
+.imageItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.imageItem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.imageOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  padding: 15px;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.imageItem:hover .imageOverlay {
+  opacity: 1;
+}
+
+.imageTags {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.noImages {
+  grid-column: span 3;
+  text-align: center;
+  padding: 40px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #666;
+}
+
+@media (max-width: 900px) {
+  .imageGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .noImages {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .imageGrid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .noImages {
+    grid-column: span 1;
+  }
+}

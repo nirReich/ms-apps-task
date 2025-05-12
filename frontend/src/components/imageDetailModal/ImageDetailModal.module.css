@@ -1,0 +1,62 @@
+.imageDetailModal {
+  width: 90%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modalBody {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.imagePreview {
+  flex: 1;
+  min-width: 300px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.imagePreview img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.imageInfo {
+  flex: 1;
+  min-width: 300px;
+}
+
+.infoItem {
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+}
+
+.infoItem:last-child {
+  border-bottom: none;
+}
+
+.infoLabel {
+  font-weight: bold;
+  color: #555;
+}
+
+.infoValue {
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .modalBody {
+    flex-direction: column;
+  }
+
+  .imagePreview,
+  .imageInfo {
+    width: 100%;
+  }
+}
