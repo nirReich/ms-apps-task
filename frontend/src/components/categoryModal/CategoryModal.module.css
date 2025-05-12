@@ -86,15 +86,6 @@
   background-color: #e0e0e0;
 }
 
-.categoryItemActive {
-  background-color: #4a90e2;
-  color: white;
-  border-color: #4a90e2;
-  border-radius: 4px;
-  border: 1px solid #ddd;
-  cursor: not-allowed;
-}
-
 @media (max-width: 480px) {
   .categoryGrid {
     grid-template-columns: repeat(2, 1fr);

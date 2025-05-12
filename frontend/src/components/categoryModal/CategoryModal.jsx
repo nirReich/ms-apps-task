@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useSelector } from "react-redux";
 import styles from "./CategoryModal.module.css";
 import AppModal from "../modal/AppModal";
+import { Button } from "@mui/material";
 
 /**
  * A modal for selecting the image category
@@ -35,24 +36,20 @@ const CategoryModal = ({ onSelectCategory }) => {
 
   return (
     <>
-      <button className={styles.categoryButton} onClick={openModal}>
+      <Button variant='contained' onClick={openModal}>
         Category: {currentCategory}
-      </button>
+      </Button>
 
       <AppModal open={isModalOpen} onClose={closeModal} title="Chose Category">
         <div className={styles.categoryGrid}>
           {categories.map((category) => (
-            <button
+            <Button
+            variant={currentCategory === category? "contained":"outlined"}
               key={category}
-              className={
-                currentCategory === category
-                  ? styles.categoryItemActive
-                  : styles.categoryItem
-              }
               onClick={() => handleCategorySelect(category)}
             >
               {category}
-            </button>
+            </Button>
           ))}
         </div>
       </AppModal>

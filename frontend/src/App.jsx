@@ -4,6 +4,7 @@ import { fetchImages, setPage, setCategory } from './store/slices/imagesSlice';
 import ImageGrid from './components/imageGrid/ImageGrid';
 import CategoryModal from './components/categoryModal/CategoryModal';
 import ImageDetailModal from './components/imageDetailModal/ImageDetailModal';
+import { Button } from '@mui/material';
 import './App.css';
 
 function App() {
@@ -44,23 +45,23 @@ function App() {
   return (
     <div className="app-container">
       <header className="app-header">
-        <button 
-          className="navigation-button prev-button" 
+        <Button 
+          variant='contained'
           onClick={handlePrevPage}
           disabled={currentPage === 1 || loading}
         >
           Prev
-        </button>
+        </Button>
         
         <CategoryModal onSelectCategory={handleCategoryChange} />
         
-        <button 
-          className="navigation-button next-button" 
+        <Button 
+          variant='contained' 
           onClick={handleNextPage}
           disabled={currentPage === totalPages || loading}
         >
           Next
-        </button>
+        </Button>
       </header>
       
       <main>
