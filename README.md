@@ -42,8 +42,54 @@ This project is a full-stack web application built with React.js on the frontend
 
 ## Setup Instructions
 
-**1. Clone the repository:**
+To get the frontend and backend applications running, follow these steps:
+
+1.  **Clone the repository:**
+    ```bash
+    git clone <repository_url>
+    cd <repository_name>
+    ```
+    *(Replace `<repository_url>` with the actual URL of your repository and `<repository_name>` with the name of the cloned directory.)*
+
+2.  **Navigate to the frontend directory:**
+    ```bash
+    cd frontend
+    ```
+
+3.  **Install frontend dependencies and run the development server:**
+    ```bash
+    yarn install
+    yarn dev
+    ```
+    *This command will install all necessary Node.js modules for the frontend and then start the development server. You will likely see an address (e.g., `http://localhost:3000`) where the frontend application is running.*
+
+4.  **Open a new terminal window or tab.**
+
+5.  **Navigate to the backend directory:**
+    ```bash
+    cd ../backend
+    ```
+
+6.  **Install backend dependencies and run the development server:**
+    ```bash
+    yarn install
+    yarn dev
+    ```
+    *This command will install all necessary Node.js modules for the backend and then start the development server. You will likely see an address (e.g., `http://localhost:5000`) where the backend API is running.*
+
+**Summary of Commands:**
 
 ```bash
+# Clone the repository
 git clone <repository_url>
-cd fullstack-image-gallery
+cd <repository_name>
+
+# Frontend setup
+cd frontend
+yarn install
+yarn dev
+
+# Backend setup (in a new terminal)
+cd ../backend
+yarn install
+yarn dev
